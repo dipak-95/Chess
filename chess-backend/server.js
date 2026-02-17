@@ -31,6 +31,7 @@ mongoose.connect(uri)
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/daily-challenge', require('./routes/dailyChallenge'));
 
 app.get('/', (req, res) => {
     res.send('Chess App Backend Running');

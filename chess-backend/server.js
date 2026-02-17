@@ -299,13 +299,13 @@ io.on('connection', (socket) => {
                     console.log(`Starting disconnect timer for ${userId} in ${roomId}`);
 
                     // Notify opponent immediately
-                    socket.to(roomId).emit('opponent_reconnecting', { timeLeft: 15 });
+                    socket.to(roomId).emit('opponent_reconnecting', { timeLeft: 30 });
 
                     const timer = setTimeout(async () => {
                         console.log(`Timeout expired for ${userId}. Forfeiting match.`);
                         disconnectTimers.delete(userId);
                         await handlePlayerExit(null, roomId, userId); // Pass userId explicitly
-                    }, 15000); // 15 Seconds
+                    }, 30000); // 30 Seconds
 
                     disconnectTimers.set(userId, { roomId, timer });
                     break; // User can only be in one room

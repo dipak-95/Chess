@@ -22,7 +22,8 @@
       },
       "edgeToEdgeEnabled": true,
       "usesCleartextTraffic": true,
-      "package": "com.chess123.chessapp"
+      "package": "com.chess123.chessapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

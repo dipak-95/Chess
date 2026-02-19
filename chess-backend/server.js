@@ -18,6 +18,12 @@ const io = new Server(server, {
 app.use(cors());
 app.use(express.json());
 
+// Request Logger (For Debugging APK Connection)
+app.use((req, res, next) => {
+    console.log(`[${new Date().toLocaleTimeString()}] ${req.method} ${req.url}`);
+    next();
+});
+
 // Database Connection
 const uri = process.env.MONGODB_URI;
 console.log('Connecting to MongoDB...', uri ? 'URI Provided' : 'URI Missing');

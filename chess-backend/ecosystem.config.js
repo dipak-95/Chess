@@ -4,7 +4,7 @@ module.exports = {
         script: "./server.js",
         env: {
             NODE_ENV: "production",
-            PORT: 8325
+            PORT: 5000
             // Add MONGODB_URI and JWT_SECRET here
         }
     }]

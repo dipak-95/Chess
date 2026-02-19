@@ -77,7 +77,7 @@ exports.login = async (req, res) => {
         res.json({
             token,
             user: {
-                id: user._id,
+                _id: user._id, // Consistently use _id
                 gamingName: user.gamingName,
                 email: user.email,
                 coins: user.coins,
